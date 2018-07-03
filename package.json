@@ -1,7 +1,7 @@
 {
-  "name": "redux-flash",
+  "name": "redux-flash-immutable",
   "version": "2.0.1",
-  "description": "Redux action creators for displaying flash messages",
+  "description": "Redux action creators for displaying flash messages with Immutable.js support",
   "main": "lib/index.js",
   "scripts": {
     "start": "yarn run build:development",
@@ -14,7 +14,7 @@
     "test:coverage": "jest --coverage",
     "report-coverage": "codeclimate-test-reporter < coverage/lcov.info"
   },
-  "repository": "launchpadlab/redux-flash",
+  "repository": "hussy-io/redux-flash-immutable",
   "keywords": [
     "redux",
     "flash",
