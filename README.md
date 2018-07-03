@@ -1,25 +1,21 @@
-# redux-flash
-*Redux action creators for displaying flash messages.*
+# redux-flash-immutable
+*Redux action creators for displaying flash messages. Fork of redux-flash with Immutable.js support.*
 
-[![NPM version](https://img.shields.io/npm/v/redux-flash.svg?style=flat-square)](https://www.npmjs.com/package/redux-flash)
+[![NPM version](https://img.shields.io/npm/v/redux-flash-immutable.svg?style=flat-square)](https://www.npmjs.com/package/redux-flash-immutable)
 
 This library provides a simple way to manage flash messages in Redux applications. It includes action creators for creating configurable flash messages as well as selectors for accessing those messages from anywhere in your application.
-
-### Migration guides
-
-- [v2.0.0](migration-guides/v2.0.0.md)
 
 ## Example
 
 ```javascript
 
-import { applyMiddleware, createStore, combineReducers } from 'redux'
+import { applyMiddleware, createStore, combineReducers } from 'redux-immutable'
 import {
     reducer as flashReducer,
     middleware as flashMiddleware,
     flashMessage,
     getFlashMessages,
-} from 'redux-flash'
+} from 'redux-flash-immutable'
 
 // First, include the flash reducer keyed under 'flash' in your root reducer
 
@@ -118,7 +114,7 @@ A [PropType](https://github.com/facebook/prop-types) for this object is exported
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { getLatestMessage, flashMessageType } from 'redux-flash'
+import { getLatestMessage, flashMessageType } from 'redux-flash-immutable'
 
 function FlashMessages ({ flash }) {
     return (
