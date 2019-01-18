@@ -12,9 +12,6 @@ export const reducer = handleActions({
     throw new Error('redux-flash: missing middleware. Did you remember to add it when initializing your store?')
   },
   [actions._addMessage]: (state, { payload }) => {
-    window.console.log('ADD MESSAGE');
-    window.console.log(payload);
-    window.console.log(state);
     return state.set('messages', state.get('messages').merge(payload))
   },
   [actions.removeMessage]: (state, { payload: id }) => {
